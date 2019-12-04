@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Livros App</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color:#073b53;">
+<nav class="navbar navbar-light" style="background-color:#054203;">
+	<a href="{% url 'index' %}" class="navbar-brand nav-button">Livraria App</a>
+    <a href="{% url 'upload-book' %}" class="navbar-link btn-lg texto-anchor">Inserir Livro</a>
+</nav>
+<br>
+{% block content %}
+<div class="card-columns">
+	{% for book in shelf %}
+	<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src = "{{ book.imagem.url }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ book.nome }}</h5>
+    <p class="card-text">{{ book.descricao }}</p>
+    <div class="card-footer bg-transparent border-dark">
+    	<p class="card-title">{{book.autor}}</p>
+    	<center>
+		<a href="update/{{book.id}}" class="btn btn-warning" id = '{{book.id}}'>Editar</a>
+		<a href="delete/{{book.id}}" class="btn btn-danger" id = '{{book.id}}'>Deletar</a>
+	</center>
+	</div>
+  </div>
+</div>
+	{% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>

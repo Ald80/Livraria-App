@@ -1,0 +1,30 @@
+.texto-anchor {
+    background-color:#FFCC33;
+    color:#000000;
+    
+}
+
+.texto-anchor:hover {
+    color:#000000;
+}
+
+.texto-h1 {
+ 
+    color:#FFFF99;
+}
+
+.nav-button {
+    background-color:#FFCC33;
+    color:#000000;
+    border-width:10px;
+    border-color:#FFCC33;
+    border-style:solid;
+    border-spacing:30px;
+    border-radius: 5px;
+}
+
+.table-upload {
+    background-color:#054203;
+    border-radius:10px;
+    color:white;
+}
