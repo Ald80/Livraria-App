@@ -11,13 +11,13 @@ Para executar o projeto:
 - Após criar a virtualenv, ative através do caminho **<NOME_VENV>/Scripts/activate.bat**
 
 - Instale as dependências do projeto
-    - comando: `pip install django`
+    - comando: `pip install django`/
                `pip install pillow`
 
 - Faça o **git clone** do projeto
 
 - Na raiz da pasta do projeto, execute o comando **migrate**
-    - comando: `python manage.py makemigrations` 
+    - comando: `python manage.py makemigrations`/ 
                `python manage.py migrate`
 
 - Execute o projeto
